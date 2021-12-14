@@ -99,7 +99,7 @@ int main(void)
 #endif //APPLICATION_RUNNING_MODE RECOGNITION_RUNNING_MODE
 
     /* Initialize retarget-io to use the debug UART port */
-    if(CY_RSLT_SUCCESS != cy_retarget_io_init(CYBSP_DEBUG_UART_TX, CYBSP_DEBUG_UART_RX, 115200))
+    if(CY_RSLT_SUCCESS != cy_retarget_io_init(CYBSP_DEBUG_UART_TX, CYBSP_DEBUG_UART_RX, 1000000))
     {
         while(1);
     }
