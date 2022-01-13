@@ -125,9 +125,9 @@ Various CLI tools include a `-h` option that prints help information to the term
       ```
    </details>
 
-3. Open SensiML Data Capture Lab from your Desktop and sign-in with your credentials if needed
-4. Follow the steps outlined [here](https://sensiml.com/documentation/guides/getting-started/capturing-sensor-data.html) to start capturing data. 
-5. To label the data you have captured, follow the steps [here](https://sensiml.com/documentation/guides/getting-started/labeling-your-data.html). 
+4. Open SensiML Data Capture Lab from your Desktop and sign-in with your credentials if needed
+5. Follow the steps outlined [here](https://sensiml.com/documentation/guides/getting-started/capturing-sensor-data.html) to start capturing data. 
+6. To label the data you have captured, follow the steps [here](https://sensiml.com/documentation/guides/getting-started/labeling-your-data.html). 
 
 ### Training a Model using SensiML  
 
