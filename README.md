@@ -110,7 +110,7 @@ Various CLI tools include a `-h` option that prints help information to the term
       1. Select the application project in the Project Explorer.
 
       2. In the **Quick Panel**, scroll down, and click **\<Application Name> Program (KitProg3_MiniProg4)**.
-         </details>
+   </details>
 
    <details><summary><b>Using CLI</b></summary>
 
