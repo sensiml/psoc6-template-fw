@@ -23,7 +23,7 @@ This package contains a template project for the CY8CKIT-062S2-43012 and the CY8
 
 For this demo, you need to:
 1. Download and install [ModusToolBox](https://www.cypress.com/products/modustoolbox).
-1. Sign up and download the SensiML toolkit by following the [Getting Started](https://sensiml.com/documentation/guides/getting-started/overview.html#welcome-to-the-sensiml-toolkit) instructions .  
+2. Sign up and download the SensiML toolkit by following the [Getting Started](https://sensiml.com/documentation/guides/getting-started/overview.html#welcome-to-the-sensiml-toolkit) instructions .  
 
 ## Usage
 
@@ -125,11 +125,9 @@ Various CLI tools include a `-h` option that prints help information to the term
       ```
    </details>
 
-4. Open SensiML Data Capture Lab from your Desktop and sign-in with your credentials if needed
-5. Follow the steps outlined [here](https://sensiml.com/documentation/guides/getting-started/capturing-sensor-data.html) to start capturing data. 
-6. To label the data you have captured, follow the steps [here](https://sensiml.com/documentation/guides/getting-started/labeling-your-data.html). 
-
-
+3. Open SensiML Data Capture Lab from your Desktop and sign-in with your credentials if needed
+4. Follow the steps outlined [here](https://sensiml.com/documentation/guides/getting-started/capturing-sensor-data.html) to start capturing data. 
+5. To label the data you have captured, follow the steps [here](https://sensiml.com/documentation/guides/getting-started/labeling-your-data.html). 
 
 ### Training a Model using SensiML  
 
