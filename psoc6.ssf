@@ -1,6 +1,6 @@
 {
     "uuid": "9d783fe6-997a-4ae4-a790-84a9e5917b1f",
-    "name": "PSoC6 WiFi BT",
+    "name": "PSoC62S2 WiFi BT",
     "collection_methods": [
         {
             "name": "live",
