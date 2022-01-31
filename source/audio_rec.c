@@ -380,7 +380,7 @@ void print_audio_config_json(void)
     {
         goto end;
     }
-    cJSON_AddItemToObject(column_location, "Microphone0", Microphone);
+    cJSON_AddItemToObject(column_location, "Microphone", Microphone);
 
     // string = cJSON_Print(config_json);
     string = cJSON_PrintUnformatted(config_json);
@@ -422,7 +422,7 @@ void audio_task(void *arg)
     {
         /* Wait until there are enough samples from the accelerometer and the
          * gyroscope in the circular buffer */
-        cy_rtos_waitbits_event(&audio_event, &audio_event_bits, true, true, CY_RTOS_NEVER_TIMEOUT);
+        //cy_rtos_waitbits_event(&audio_event, &audio_event_bits, true, true, CY_RTOS_NEVER_TIMEOUT);
         // printf("h\r");
         /* Check for a connect/disconnect from host */
         read_len = cyhal_uart_readable(&cy_retarget_io_uart_obj);
@@ -436,7 +436,7 @@ void audio_task(void *arg)
             if(strcmp("connect",read_buffer) == 0)
             {
                 transmit_flag = 1;
-                cy_rgb_led_on(CY_RGB_LED_COLOR_GREEN, CY_RGB_LED_MAX_BRIGHTNESS);
+
 
             }
             else if(strcmp("disconnect",read_buffer) == 0)
@@ -451,10 +451,19 @@ void audio_task(void *arg)
 
         if(transmit_flag)
         {
+        	cy_rtos_waitbits_event(&audio_event, &audio_event_bits, true, true, CY_RTOS_NEVER_TIMEOUT);
             int16_t *audio_buf = audio_rec_get_new_buffer();
             size_t write_size = AUDIO_REC_RECORD_BYTE_SIZE;
             // fwrite(audio_buf, AUDIO_REC_RECORD_BYTE_SIZE, 1, stdout);
-            cyhal_uart_write(&cy_retarget_io_uart_obj, audio_buf, &write_size);
+
+            if(audio_buf != NULL){
+              cy_rgb_led_on(CY_RGB_LED_COLOR_GREEN, CY_RGB_LED_MAX_BRIGHTNESS);
+              cyhal_uart_write(&cy_retarget_io_uart_obj, audio_buf, &write_size);
+              cy_rgb_led_off();
+            }
+            //fwrite(audio_buf, AUDIO_REC_RECORD_BYTE_SIZE, 1, stdout);
+
+
         }
         else
         {
@@ -491,7 +500,9 @@ void audio_task(void *arg)
         cy_rtos_waitbits_event(&audio_event, &audio_event_bits, true, true, CY_RTOS_NEVER_TIMEOUT);
         // printf("h\r");
         int16_t *audio_buf = audio_rec_get_new_buffer();
-        sml_recognition_run((SENSOR_DATA_T *)&audio_buf, AUDIO_REC_RECORD_BUFFER_SIZE, 1);
+        if(audio_buff != NULL){
+          sml_recognition_run((SENSOR_DATA_T *)&audio_buf, AUDIO_REC_RECORD_BUFFER_SIZE, 1);
+        }
     }
 
 }
