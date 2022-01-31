@@ -84,9 +84,6 @@
             "sensors": [
                 {
                     "column_count": 1,
-                    "column_suffixes": [
-                        "0"
-                    ],
                     "type": "Microphone",
                     "parameters": [],
                     "sensor_id": 3,
