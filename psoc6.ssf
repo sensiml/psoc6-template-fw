@@ -10,7 +10,7 @@
           "link": "https://sensiml.com/documentation/firmware/infineon-psoc6/infineon-psoc6-cy8ckit-062s2-43012.html"
         },
     ],
-	"documentation_links": [
+    "documentation_links": [
         {
           "title": "Infineon Product Page",
           "description": "Product and support documentation for the Infineon PSoC 6 Wi-Fi BT Pioneer Kit,
@@ -66,7 +66,7 @@
                         "Z"
                     ],
                     "type": "Accelerometer",
-					"is_default": true,
+                    "is_default": true,
                     "parameters": [],
                 },
                 {
@@ -77,7 +77,7 @@
                         "Z"
                     ],
                     "type": "Gyroscope",
-					"is_default": true,
+                    "is_default": true,
                     "parameters": [],
                 }
             ],
