@@ -1,22 +1,35 @@
 {
-    "uuid": "9d783fe6-997a-4ae4-a790-84a9e5917b1f",
-    "name": "PSoC62S2 WiFi BT",
+    "uuid": "00000000-0000-0000-0000-000000000000",
+    "device_name": "PSoC 6 Wi-Fi BT Pioneer Kit",
+    "device_manufacturer": "Infineon",
+    "plugin_developer": "SensiML",
+    "firmware_download_links": [
+        {
+          "title": "Data Collection Firmware",
+          "description": "SensiML documentation for building data collection and recognition firmware",
+          "link": "https://sensiml.com/documentation/firmware/infineon-psoc6/infineon-psoc6-cy8ckit-062s2-43012.html"
+        },
+    ],
+	"documentation_links": [
+        {
+          "title": "Infineon Product Page",
+          "description": "Product and support documentation for the Infineon PSoC 6 Wi-Fi BT Pioneer Kit,
+          "link": "https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-062s2-43012/"
+        },
+    ],
     "collection_methods": [
         {
             "name": "live",
             "display_name": "Live Stream Capture",
-            "storage_path": null,
             "is_default": true
         }
     ],
     "device_connections": [
         {
-            "name": "serial_simple_stream",
-            "display_name": "Data Stream Serial Port",
+            "display_name": "Serial Port",
             "value": 1,
             "is_default": true,
             "serial_port_configuration": {
-                "com_port": null,
                 "baud": 1000000,
                 "stop_bits": 1,
                 "parity": 0,
@@ -25,10 +38,9 @@
             }
         },
         {
-            "name": "wifi",
-            "display_name": "WiFi",
+            "display_name": "Wi-Fi",
             "value": 2,
-            "is_default": true,
+            "is_default": false,
             "wifi_configuration": {
                 "max_live_sample_rate": 17000
             }
@@ -36,7 +48,6 @@
     ],
     "capture_sources": [
         {
-            "max_throughput": 0,
             "name": "Motion",
             "part": "BMX160",
             "sample_rates": [
@@ -55,9 +66,8 @@
                         "Z"
                     ],
                     "type": "Accelerometer",
+					"is_default": true,
                     "parameters": [],
-                    "sensor_id": 1,
-                    "can_live_stream": false
                 },
                 {
                     "column_count": 3,
@@ -67,15 +77,12 @@
                         "Z"
                     ],
                     "type": "Gyroscope",
+					"is_default": true,
                     "parameters": [],
-                    "sensor_id": 2,
-                    "can_live_stream": false
                 }
             ],
-            "sensor_combinations": null
         },
         {
-            "max_throughput": 0,
             "name": "Audio",
             "part": "Default",
             "sample_rates": [
@@ -86,11 +93,8 @@
                     "column_count": 1,
                     "type": "Microphone",
                     "parameters": [],
-                    "sensor_id": 3,
-                    "can_live_stream": false
                 }
             ],
-            "sensor_combinations": null
         }
     ],
     "is_little_endian": true
