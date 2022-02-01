@@ -500,8 +500,8 @@ void audio_task(void *arg)
         cy_rtos_waitbits_event(&audio_event, &audio_event_bits, true, true, CY_RTOS_NEVER_TIMEOUT);
         // printf("h\r");
         int16_t *audio_buf = audio_rec_get_new_buffer();
-        if(audio_buff != NULL){
-          sml_recognition_run((SENSOR_DATA_T *)&audio_buf, AUDIO_REC_RECORD_BUFFER_SIZE, 1);
+        if(audio_buf != NULL){
+          sml_recognition_run(audio_buf, AUDIO_REC_RECORD_BUFFER_SIZE, 1);
         }
     }
 
