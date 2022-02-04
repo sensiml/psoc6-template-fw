@@ -5,23 +5,16 @@
     "plugin_developer": "SensiML",
     "firmware_download_links": [
         {
-          "title": "Data Collection Firmware",
-          "description": "SensiML documentation for building data collection and recognition firmware",
-          "link": "https://sensiml.com/documentation/firmware/infineon-psoc6/infineon-psoc6-cy8ckit-062s2-43012.html"
-        },
+            "title": "Data Collection Firmware",
+            "description": "SensiML documentation for building data collection and recognition firmware",
+            "link": "https://sensiml.com/documentation/firmware/infineon-psoc6/infineon-psoc6-cy8ckit-062s2-43012.html"
+        }
     ],
     "documentation_links": [
         {
-          "title": "Infineon Product Page",
-          "description": "Product and support documentation for the Infineon PSoC 6 Wi-Fi BT Pioneer Kit,
-          "link": "https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-062s2-43012/"
-        },
-    ],
-    "collection_methods": [
-        {
-            "name": "live",
-            "display_name": "Live Stream Capture",
-            "is_default": true
+            "title": "Infineon Product Page",
+            "description": "Product and support documentation for the Infineon PSoC 6 Wi-Fi BT Pioneer Kit",
+            "link": "https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-062s2-43012/"
         }
     ],
     "device_connections": [
@@ -33,17 +26,13 @@
                 "baud": 1000000,
                 "stop_bits": 1,
                 "parity": 0,
-                "handshake": 0,
-                "max_live_sample_rate": 17000
+                "handshake": 0
             }
         },
         {
             "display_name": "Wi-Fi",
             "value": 2,
-            "is_default": false,
-            "wifi_configuration": {
-                "max_live_sample_rate": 17000
-            }
+            "is_default": false
         }
     ],
     "capture_sources": [
@@ -67,7 +56,7 @@
                     ],
                     "type": "Accelerometer",
                     "is_default": true,
-                    "parameters": [],
+                    "parameters": []
                 },
                 {
                     "column_count": 3,
@@ -78,9 +67,9 @@
                     ],
                     "type": "Gyroscope",
                     "is_default": true,
-                    "parameters": [],
+                    "parameters": []
                 }
-            ],
+            ]
         },
         {
             "name": "Audio",
@@ -92,9 +81,9 @@
                 {
                     "column_count": 1,
                     "type": "Microphone",
-                    "parameters": [],
+                    "parameters": []
                 }
-            ],
+            ]
         }
     ],
     "is_little_endian": true
