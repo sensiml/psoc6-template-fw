@@ -135,6 +135,4 @@ To train a model using captured data, please follow the [guide here](https://sen
 
 ### Deploying Knowledge packs to the PSoC62S2 WiFi BT board  
 
-Follow this link for more information on deploying the knowlege pack:
-      
-https://sensiml.com/documentation/firmware/infineon-psoc6/infineon-psoc6-cy8ckit-062s2-43012.html#download-flash-model-firmware
+For integrating the Knowledge pack to the PSoC62S2 WiFi BT board, follow the steps [here](https://sensiml.com/documentation/firmware/infineon-psoc6/infineon-psoc6-cy8ckit-062s2-43012.html#download-flash-model-firmware)
