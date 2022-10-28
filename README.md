@@ -11,7 +11,7 @@ This package contains a template project for the CY8CKIT-062S2-43012 and the CY8
 
 ## Supported toolchains (make variable 'TOOLCHAIN')
 
-- GNU Arm� embedded compiler v10.3.1 (`GCC_ARM`) - Default value of `TOOLCHAIN`
+- GNU Arm&reg; embedded compiler v10.3.1 (`GCC_ARM`) - Default value of `TOOLCHAIN`
 - Arm&reg; compiler v6.13 (`ARM`)
 - IAR C/C++ compiler v8.42.2 (`IAR`)
 
@@ -23,7 +23,7 @@ This package contains a template project for the CY8CKIT-062S2-43012 and the CY8
 
 For this demo, you need to:
 1. Download and install [ModusToolBox](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/).
-2. Sign up and download the SensiML toolkit by following the [Getting Started](https://sensiml.com/documentation/guides/getting-started/overview.html#welcome-to-the-sensiml-toolkit) instructions .  
+2. Sign up and download the SensiML toolkit by following the [Getting Started](https://sensiml.com/documentation/guides/getting-started/overview.html#welcome-to-the-sensiml-toolkit) instructions.  
 
 ## Usage
 
@@ -95,7 +95,9 @@ Various CLI tools include a `-h` option that prints help information to the term
 
 1. Connect the board to your PC using the provided USB cable through the USB connector.
 
-2. In source/app_config.h, ensure the mode is in DATA_CAPTURE_RUNNING_MODE to start capturing training data 
+2. Open a terminal program and select the KitProg3 COM port. Set the serial port parameters to 8N1 and 1000000 baud
+
+3. In *source/app_config.h*, ensure the mode is in DATA_CAPTURE_RUNNING_MODE to start capturing training data 
 
    ```
    #define APPLICATION_RUNNING_MODE DATA_CAPTURE_RUNNING_MODE
@@ -103,7 +105,7 @@ Various CLI tools include a `-h` option that prints help information to the term
 
    **Optional**: The default sensor being used in the Microphone, if you want to capture motion data instead change the SENSOR_SELECT_MODE to SENSOR_MOTION.
 
-3. Program the board using one of the following:
+4. Program the board using one of the following:
 
    <details><summary><b>Using Eclipse IDE for ModusToolbox</b></summary>
 
@@ -125,9 +127,9 @@ Various CLI tools include a `-h` option that prints help information to the term
       ```
    </details>
 
-4. Open SensiML Data Capture Lab from your Desktop and sign-in with your credentials if needed
-5. Follow the steps outlined [here](https://sensiml.com/documentation/guides/getting-started/capturing-sensor-data.html) to start capturing data. 
-6. To label the data you have captured, follow the steps [here](https://sensiml.com/documentation/guides/getting-started/labeling-your-data.html). 
+5. Open SensiML Data Capture Lab from your Desktop and sign-in with your credentials if needed
+6. Follow the steps outlined [here](https://sensiml.com/documentation/guides/getting-started/capturing-sensor-data.html) to start capturing data. 
+7. To label the data you have captured, follow the steps [here](https://sensiml.com/documentation/guides/getting-started/labeling-your-data.html). 
 
 ### Training a Model using SensiML  
 
