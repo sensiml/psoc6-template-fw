@@ -131,11 +131,8 @@ void pdm_pcm_isr_handler(void *arg, cyhal_pdm_pcm_event_t event);
 *******************************************************************************/
 cy_rslt_t pdm_pcm_clock_init(void) {
     cy_rslt_t result;
-    result = cyhal_clock_get(&pll_clock, &CYHAL_CLOCK_PLL[1]);
 
-    if (result == CY_RSLT_SUCCESS) {
-        result = cyhal_clock_init(&pll_clock);
-    }
+    result = cyhal_clock_reserve(&pll_clock, &CYHAL_CLOCK_PLL[1]);
 
     if (result == CY_RSLT_SUCCESS) {
         result = cyhal_clock_set_frequency(&pll_clock, AUDIO_SYS_CLOCK_HZ, NULL);
@@ -146,11 +143,7 @@ cy_rslt_t pdm_pcm_clock_init(void) {
     }
 
     if (result == CY_RSLT_SUCCESS) {
-        result = cyhal_clock_get(&audio_clock, &CYHAL_CLOCK_HF[1]);
-    }
-
-    if (result == CY_RSLT_SUCCESS) {
-        result = cyhal_clock_init(&audio_clock);
+        result = cyhal_clock_reserve(&audio_clock, &CYHAL_CLOCK_HF[1]);
     }
 
     if (result == CY_RSLT_SUCCESS) {
@@ -413,7 +406,7 @@ void audio_task(void *arg)
 {
     (void)arg;
     volatile uint32_t transmit_flag = 0;
-    uint32_t read_len = 0;
+    size_t read_len = 0;
 
     print_audio_config_json();
     cy_rtos_delay_milliseconds(500);

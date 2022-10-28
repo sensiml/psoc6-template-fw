@@ -4,25 +4,25 @@ This package contains a template project for the CY8CKIT-062S2-43012 and the CY8
 
 ## Requirements
 
-- [ModusToolbox&trade; software](https://www.cypress.com/products/modustoolbox-software-environment) v2.2 or later (tested with v2.4)
-- Board support package (BSP) minimum required version: 2.0.0
+- [ModusToolbox&trade; software](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/) v3.0 or later (tested with v3.0)
+- PSoC&trade; 6 Board support package (BSP) minimum required version: 4.0.0
 - Programming language: C
-- Associated parts: All [PSoC&trade; 6 MCU](https://www.cypress.com/PSoC6) parts
+- Associated parts: All [PSoC&trade; 6 MCU](https://www.infineon.com/cms/en/product/microcontroller/32-bit-psoc-arm-cortex-microcontroller/psoc-6-32-bit-arm-cortex-m4-mcu)
 
 ## Supported toolchains (make variable 'TOOLCHAIN')
 
-- GNU Arm&reg; embedded compiler v9.3.1 (`GCC_ARM`) - Default value of `TOOLCHAIN`
+- GNU Arm� embedded compiler v10.3.1 (`GCC_ARM`) - Default value of `TOOLCHAIN`
 - Arm&reg; compiler v6.13 (`ARM`)
 - IAR C/C++ compiler v8.42.2 (`IAR`)
 
 ## Supported kits (make variable 'TARGET')
 
-- [PSoC&trade; 62S2 Wi-Fi Bluetooth&reg; pioneer kit](https://www.cypress.com/CY8CKIT-062S2-43012) (`CY8CKIT-062S2-43012`)
+- [PSoC&trade; 62S2 Wi-Fi Bluetooth&reg; pioneer kit](https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-062s2-43012/) (`CY8CKIT-062S2-43012`)
 
 ## Installation
 
 For this demo, you need to:
-1. Download and install [ModusToolBox](https://www.cypress.com/products/modustoolbox).
+1. Download and install [ModusToolBox](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/).
 2. Sign up and download the SensiML toolkit by following the [Getting Started](https://sensiml.com/documentation/guides/getting-started/overview.html#welcome-to-the-sensiml-toolkit) instructions .  
 
 ## Usage
