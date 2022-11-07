@@ -392,7 +392,7 @@ void sensor_task(void *arg)
 {
     (void)arg;
     volatile uint32_t transmit_flag = 0;
-    uint32_t read_len = 0;
+    size_t read_len = 0;
 
     print_sensor_config_json();
     cy_rtos_delay_milliseconds(1000);
