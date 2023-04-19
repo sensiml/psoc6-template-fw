@@ -466,7 +466,10 @@ void sensor_task(void *arg)
 
         int16_t temp_buffer[SENSOR_BATCH_SIZE][SENSOR_NUM_AXIS];
         cy_fifo_read(&sensor_fifo, &temp_buffer, SENSOR_BATCH_SIZE * SENSOR_DATA_WIDTH);
-        sensiml_recognition(temp_buffer[i], SENSOR_BATCH_SIZE, SENSOR_NUM_AXIS, 0);
+        for (int i = 0; i < SENSOR_BATCH_SIZE; i++)
+        {
+            sensiml_recognition(temp_buffer[i], 1, SENSOR_NUM_AXIS, 0);
+        }
     }
 }
 #endif //(APPLICATION_RUNNING_MODE == RECOGNITION_RUNNING_MODE)
