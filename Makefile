@@ -80,7 +80,7 @@ SHIELD_DATA_COLLECTION=CY_028_SENSE_SHIELD
 # ... then code in directories named COMPONENT_foo and COMPONENT_bar will be
 # added to the build
 #
-COMPONENTS=FREERTOS
+COMPONENTS=FREERTOS SENSIML_RECOGNITION
 
 # Like COMPONENTS, but disable optional code that was enabled by default.
 DISABLE_COMPONENTS=
